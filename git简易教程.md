@@ -15,7 +15,9 @@
 ##第三步：将本地的版本库添加到远程仓库
 通过浏览器打开gitup,登录自己的账号，然后创建一个repository
 
-![MacDown logo](http://macdown.uranusjr.com/static/base/img/logo-160.png)
+![](https://github.com/1325718308/doc/blob/master/images/001.jpeg)
+
+![](https://github.com/1325718308/doc/blob/master/images/002.jpeg)
 
 
 	
