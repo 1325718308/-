@@ -1,0 +1,64 @@
+
+<html>
+
+<head>
+    <title>javascript</title>
+</head>
+<style type="text/css">
+    .title {
+        font-weight: 600;
+        font-size: 20px;
+    }
+
+    .lfr {
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+    }
+
+    .title-1 {
+        font-size: 18px;
+        font-weight: 500;
+    }
+
+    .content {
+        font-size: 16px;
+    }
+</style>
+
+<body>
+    <div class="title">一、JavaScript运行三部曲</div>
+    <ul class="lfr">
+        <li class="title-1">语法分析：</li>
+        <div class="content">JavaScript代码在编译前期的准备工作，如果代码里有低级语法错误，会直接报错。</div>
+    </ul>
+    <ul class="lfr">
+        <li class="title-1">预编译：</li>
+        <div class="content">JavaScript代码在执行前期的准备工作。</div>
+    </ul>
+    <ul class="lfr">
+        <li class="title-1">解释执行：</li>
+        <div class="content">开始执行代码。</div>
+    </ul>
+    <div class="title">二、预编译</div>
+    <ul class="lfr">
+        <li class="title-1">预编译前奏：</li>
+        <div class="content">
+            <div>（1）imply global暗示全局变量：即任何变量如果未经声明就直接使用，那么这个变量就会自动提升为全局对象所拥有。 例如：a = 123 ，这里的a变量会自动提升为全局变量。</div>
+            <div>（2）所有的声明的全局变量，都归window所拥有。例如：var a = 123; 相当于window.a = 123;</div>
+        </div>
+    </ul>
+    <ul class="lfr">
+        <li class="title-1">预编译：</li>
+        <div class="content">
+                第一步：创建AO对象（Activation Object）,也叫执行器上下文。<br>
+                第二步：找形参和变量声明，将变量和形参作为AO对象的属性名，值统一为undifined.<br>
+                第三步：形参值和实参值相统一。<br>
+                第四步：在函数体里找函数声明，将函数体作为其值。<br>
+        </div>
+    </ul>
+    <script type="text/javascript">
+    </script>
+</body>
+
+</html>
