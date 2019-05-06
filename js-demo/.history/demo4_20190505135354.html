@@ -1,0 +1,19 @@
+<html>
+    <head>
+        <title>demo4 闭包</title>
+        <body>
+            <script type='text/javascript'>
+                function test(){
+                    var arr = [];
+                    for(var i=0;i<10;i++){
+                        arr[i] = function (){
+                            console.log(i)
+                        }
+                    }
+                }
+                var myArr = test()
+                
+            </script>
+        </body>
+    </head>
+</html>

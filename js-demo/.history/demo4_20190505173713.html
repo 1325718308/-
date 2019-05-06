@@ -1,0 +1,43 @@
+<html>
+
+<head>
+    <title>demo4 闭包</title>
+
+<body>
+    <script type='text/javascript'>
+        // a = 10;
+        // console.log(a)
+        // function test() {
+        //     switch (a) {
+        //         case 1:
+
+        //     }
+        //     var arr = [];
+        //     for (var i = 0; i < 10; i++) {
+        //         (function (j) {
+        //             arr[j] = function () {
+        //                 document.write(j + ' ')
+        //             }
+        //         }(i))
+        //     }
+        //     return arr;
+        // }
+        // var myArr = test();
+        // for (j = 0; j < 10; j++) {
+        //     myArr[j]()
+        // }
+
+        function add(){
+            var num = 0;
+            function a(){
+                console.log(++num)
+            }
+            return a
+            let myAdd = add()
+            myAdd()
+        }
+    </script>
+</body>
+</head>
+
+</html>

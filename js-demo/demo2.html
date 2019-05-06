@@ -1,0 +1,50 @@
+<html>
+
+<head>
+    <title>demo2预编译</title>
+</head>
+
+<body>
+    <script type="text/javascript">
+        a = 100;
+        function demo(e) {
+            function e() { }
+            arguments[0] = 2;
+            console.log(e); //2
+            if (a) {
+                var b = 123;
+                function c() {
+
+                }
+            }
+            var c;
+            a = 10;
+            var a;
+            console.log(b) //undified
+            f = 123;
+            console.log(c); //undified fn
+            console.log(a); //10
+        }
+        var a;
+        demo(1);
+        console.log(a); //100
+        console.log(f); //123
+
+        /**GO{
+            a: 100;
+            demo:function(){},
+            f:123
+
+        }*
+        /**
+            AO{
+                e:2;
+                b:undified;
+                c:undified fn;
+                a:10;
+            }
+        **/
+    </script>
+</body>
+
+</html>

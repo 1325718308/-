@@ -1,0 +1,30 @@
+<html>
+
+<head>
+    <title>demo1</title>
+</head>
+
+<body>
+    <script type="text/javascript">
+        //1.
+        // function bar(){
+        //     return foo;
+        //     foo = 10;
+        //     function foo(){
+
+        //     }
+        //     var foo = 11;
+        // }
+        // console.log(bar())  //ƒ foo(){}
+        //2.
+        console.log(bar()) // 11
+        function bar() {
+            foo = 10;
+            function foo() { }
+            var foo = 11;
+            return foo;
+        }
+    </script>
+</body>
+
+</html>

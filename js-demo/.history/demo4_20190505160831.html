@@ -1,0 +1,33 @@
+<html>
+
+<head>
+    <title>demo4 闭包</title>
+
+<body>
+    <script>
+        a = 10;
+        console.log(a)
+        function test() {
+            switch(a){
+                case 1:
+
+            }
+            var arr = [];
+            for (var i = 0; i < 10; i++) {
+                (function (j) {
+                    arr[j] = function () {
+                        document.write(j + ' ')
+                    }
+                }(i))
+            }
+            return arr;
+        }
+        var myArr = test();
+        for (j = 0; j < 10; j++) {
+            myArr[j]()
+        }
+    </script>
+</body>
+</head>
+
+</html>

@@ -1,0 +1,43 @@
+<html>
+
+<head>
+    <title>demo4 闭包</title>
+
+<body>
+    <script type='text/javascript'>
+        a = 10;
+        console.log(a)
+        function test() {
+            switch(a){
+                case 1:
+                
+            }
+            var arr = [];
+            for (var i = 0; i < 10; i++) {
+                (function (j) {
+                    arr[j] = function () {
+                        document.write(j + ' ')
+                    }
+                }(i))
+            }
+            return arr;
+        }
+        var myArr = test();
+        for (j = 0; j < 10; j++) {
+            myArr[j]()
+        }
+    </script>
+      <form name="f2" action="" method="post">
+            <hr>
+            原始数据输入：<input type="text" id="dh3" value=""/>
+            原始数据输入：<input type="text" id="dh4" value=""/>
+            <br>
+            <br />
+            <input id="9" type="button" value="求较小值" onclick="javascript:start(9)"/>
+            <input id="10" type="button" value="求较大值" onclick="javascript:start(10)" />
+            运算结果：<input type="text" id="dh5" value=" "/>
+            </form>
+</body>
+</head>
+
+</html>

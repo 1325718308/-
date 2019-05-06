@@ -1,0 +1,22 @@
+<html>
+    <head>
+        <title>demo4 闭包</title>
+        <body>
+            <script type='text/javascript'>
+                function test(){
+                    var arr = [];
+                    for(var i=0;i<10;i++){
+                        arr[i] = function (a){
+                            document.write(a+'-')
+                        }
+                    }
+                    return arr;
+                }
+                var myArr = test();
+                for(j=0;j<10;j++){
+                    myArr[j](j)
+                }
+            </script>
+        </body>
+    </head>
+</html>
