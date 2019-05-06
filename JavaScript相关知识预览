@@ -1,5 +1,5 @@
 JavaScript 相关知识
-λ	JavaScript运行三部曲
+JavaScript运行三部曲
 1.	语法分析：JavaScript代码在编译前期的准备工作，如果代码里有低级语法错误，会直接报错。
 2.	预编译：JavaScript代码在执行前期的准备工作。
 3.	解释执行：开始执行代码。
