@@ -1,0 +1,48 @@
+<html>
+    <head>
+        <title>demo5 继承</title>
+    </head>
+    <body>
+        <script type="text/javascript">
+            /***
+                以下是四种继承方式
+            */
+            
+            //原型连
+            Flower.prototype.jointName = "植物"
+            function Flower(){}
+            var flower  = new Flower();
+            Rose.prototype = Flower;
+            function Rose(){}
+            var rose = new Rose()
+
+            //构造函数
+            function Person(name,age,sex){
+                this.name = name;
+                this.age = age;
+                this.sex = sex;
+            }
+            function Student(name,age,sex,grade,className){
+                Person.call(this,name,age,sex);
+                this.grade = grade;
+                this.className = className;
+            }
+            var student = new Student("Liu",14,'Male',"五年级一班")
+            
+                
+            // 圣杯模式
+            Father.prototype.lastName = "Du"
+            function Father(){}
+            function Son(){}
+            function inherit(Target,Origin){
+                function F(){};
+                F.prototype = Origin.prototype;
+                Target.prototype = new F();
+                Target.prototype.constuctor = Target;
+            }
+            inherit(Son,Target);
+            var son = new Son();
+            var father = new Father()
+        </script>
+    </body>
+</html>

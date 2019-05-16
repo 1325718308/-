@@ -1,0 +1,59 @@
+<html>
+
+<head>
+    <title>demo6 命名空间</title>
+</head>
+
+<body>
+    <script type="text/javascript">
+        // //管理变量，防止污染全局变量，适用于模块化开发
+
+        // //链式调用
+        // var liu = {
+        //     smoke: function () {
+        //         console.log("smoking...");
+        //         return this;
+        //     },
+        //     drink: function () {
+        //         console.log('drinking...');
+        //         return this;
+        //     },
+        //     perm: function () {
+        //         console.log('perming ...');
+        //         return this;
+        //     }
+        // }
+        // liu.smoke().drink().perm()
+
+        // //属性的表示方法
+        // var deng = {
+        //     wife1: { name: "xiaoliu" },
+        //     wife2: { name: "xiaozhang" },
+        //     wife3: { name: "xiaodeng" },
+        //     wife4: { name: "xiaoli" }
+        // }
+
+        //对象的枚举（对象的遍历）for in 循环
+        var deng = {
+            name: 'Deng',
+            age: 30,
+            sex: 'male',
+            height: 180,
+            __proto__: {
+                lastName: "Deng"
+            }
+
+        }
+        for (var key in deng) {
+            console.log(deng.hasOwnProperty(key))
+            if (deng.hasOwnProperty(key)) {//判断是否是自己的属性
+                console.log(deng[key])
+            }
+        }
+
+
+
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,28 @@
+<html>
+    <head>
+        <title>demo5 继承</title>
+    </head>
+    <body>
+        <script type="text/javascript">
+            //构造函数
+            function Person(name,age,sex){
+                this.name = name;
+                this.age = age;
+                this.sex = sex;
+            }
+            // 圣杯模式
+            Father.prototype.lastName = "Du"
+            function Father(){}
+            function Son(){}
+            function inherit(Target,Origin){
+                function F(){};
+                F.prototype = Origin.prototype;
+                Target.prototype = new F();
+                Target.prototype.constuctor = Target;
+            }
+            inherit(Son,Target);
+            var son = new Son();
+            var father = new Father()
+        </script>
+    </body>
+</html>

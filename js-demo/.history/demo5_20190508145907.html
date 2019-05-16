@@ -1,0 +1,18 @@
+<html>
+    <head>
+        <title>demo5 继承</title>
+    </head>
+    <body>
+        <script type="text/javascript">
+            Father.prototype.lastName = "Du"
+            function Father(){}
+            function Son(){}
+            function inherit(Target,Origin){
+                function F(){};
+                F.prototype = Origin.prototype;
+                Target.prototype = new F();
+                Target.prototype.constuctor = Target;
+            }
+        </script>
+    </body>
+</html>
